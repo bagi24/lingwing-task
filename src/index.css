@@ -1,0 +1,135 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dropdown {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.dropdown-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.dropdown-list-item {
+  cursor: pointer;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.dropdown-item-photo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.dropdown-item-text {
+  font-size: 16px;
+}
+
+.language-dropdown {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Styles for the flag image */
+.flag-img {
+  width: 30px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 5px; /* Add some spacing between the flag and text */
+  vertical-align: middle; /* Align the flag vertically in the middle */
+}
+
+/* Styles for the country abbreviation */
+.abbreviation {
+  display: inline-block;
+  padding: 5px;
+  font-size: 22px;
+  margin-left: 5px; /* Add some spacing between the flag and abbreviation */
+  vertical-align: middle; /* Align the abbreviation vertically in the middle */
+}
+
+/* Styles for the arrow */
+.arrow {
+  margin-left: 5px; /* Add some spacing between the abbreviation and arrow */
+}
+
+/* Styles for the language dropdown list */
+.lang-ul {
+  position: absolute;
+  top: 100%; /* Position the dropdown below the flag and abbreviation */
+  left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  z-index: 1; /* Ensure the dropdown appears above other elements */
+  display: none; /* Hide the dropdown by default */
+}
+
+/* Show the dropdown when isDropdownOpen is true */
+.flag-container:hover .lang-ul,
+.flag-container:focus-within .lang-ul,
+.lang-ul:hover {
+  display: block;
+}
+
+/* Styles for each language item in the dropdown list */
+.lang-ul li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Highlight the selected language in the dropdown list */
+.lang-ul li.active {
+  background-color: #f0f0f0;
+}
+
+.lang-li {
+  display: flex;
+}
