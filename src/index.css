@@ -1,7 +1,7 @@
 .header-conteiner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .header-leftSide {
@@ -13,7 +13,9 @@
 .headr-rightSide {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  border: 2px solid greenyellow;
+  width: 40%;
 }
 
 .fa-bars {
@@ -32,6 +34,40 @@
   border: 2px solid green;
 }
 
+/* header 4square  */
+.square-container {
+  display: grid;
+  grid-template-columns: repeat(2, 10px);
+  grid-template-rows: repeat(2, 10px);
+  gap: 3px;
+  font-size: 10px;
+  color: gray;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.main-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.square-container span {
+  width: 30px;
+  height: 30px;
+}
+
+.square-text {
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  cursor: pointer;
+}
+.square-text:hover {
+  color: rgb(255, 150, 21);
+}
+.lingwingLogo {
+  margin-left: 40px;
+  cursor: pointer;
+}
+
 .lingwing-Logo {
   width: 200px;
   height: 50px;
@@ -45,10 +81,10 @@
 
 /* Styles for the flag image */
 .flag-img {
-  width: 30px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 5px; /* Add some spacing between the flag and text */
-  vertical-align: middle; /* Align the flag vertically in the middle */
+  width: 30px;
+  height: auto;
+  margin-right: 5px;
+  vertical-align: middle;
 }
 
 /* Styles for the country abbreviation */
@@ -56,47 +92,129 @@
   display: inline-block;
   padding: 5px;
   font-size: 22px;
-  margin-left: 5px; /* Add some spacing between the flag and abbreviation */
-  vertical-align: middle; /* Align the abbreviation vertically in the middle */
+  margin-left: 5px;
+  vertical-align: middle;
 }
 
-/* Styles for the arrow */
 .arrow {
-  margin-left: 5px; /* Add some spacing between the abbreviation and arrow */
+  margin-left: 5px;
 }
 
-/* Styles for the language dropdown list */
 .lang-ul {
   position: absolute;
-  top: 100%; /* Position the dropdown below the flag and abbreviation */
+  top: 100%;
   left: 0;
   list-style: none;
   padding: 0;
   margin: 5px 0 0;
   background-color: #fff;
   border: 1px solid #ccc;
-  z-index: 1; /* Ensure the dropdown appears above other elements */
-  display: none; /* Hide the dropdown by default */
+  width: 170px;
+  height: 250px;
+  z-index: 1;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
 }
 
-/* Show the dropdown when isDropdownOpen is true */
 .flag-container:hover .lang-ul,
 .flag-container:focus-within .lang-ul,
 .lang-ul:hover {
   display: block;
+  display: flex;
 }
 
-/* Styles for each language item in the dropdown list */
 .lang-ul li {
   padding: 5px;
   cursor: pointer;
 }
 
-/* Highlight the selected language in the dropdown list */
 .lang-ul li.active {
   background-color: #f0f0f0;
 }
 
 .lang-li {
   display: flex;
+}
+
+.circle-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lang-li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.acc-container:hover .acc-ul,
+.acc-container:focus-within .acc-ul,
+.acc-ul:hover {
+  display: block;
+}
+
+.acc-ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 200px;
+  height: 250px;
+  z-index: 1;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.acc-ul li:hover {
+  color: aqua;
+  cursor: pointer;
+}
+
+.acc-dropdown {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.acc-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+  /* Add any other styling you want for the profile image */
+}
+
+.acc-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.acc-name p {
+  margin: 0;
+  margin-right: 40px;
+  font-size: 22px;
+}
+
+.arrow-white {
+  color: rgb(60, 145, 74);
+  font-size: 30px;
 }

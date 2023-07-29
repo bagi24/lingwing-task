@@ -6,6 +6,7 @@ import SpFlag from "../images/Spanish-lang.png"
 import TurFlag from "../images/Turkish-lang.png"
 import BenFlag from "../images/Bengali-lang.png"
 import LanguageDropdown from "./LanguageDropdown";
+import AccountDropdown from "./AccountDropdown";
 
 const Header = () => {
 
@@ -35,11 +36,25 @@ const Header = () => {
      
 
       <div className="headr-rightSide">
-      <span> <i className="fa-solid fa-grip-vertical"></i></span>
-
+     
       <LanguageDropdown  languages = {languages}/>
 
 
+<div className="main-page">
+<div className="square-container">
+<span><i className="fa-solid fa-square"></i></span>
+      <span><i className="fa-solid fa-square"></i></span>
+      <span><i className="fa-solid fa-square"></i></span>
+      <span><i className="fa-solid fa-square"></i></span>
+</div>
+<span> <p className="square-text">ჩემი გვერდი </p></span>
+
+</div>
+
+
+      
+
+<AccountDropdown />
 
       </div>
 
