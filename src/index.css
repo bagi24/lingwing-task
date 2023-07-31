@@ -309,8 +309,9 @@ width: 100%;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  
-  
+  position: relative;
+ 
+
 
  
 }
@@ -330,7 +331,8 @@ color: white;
 display: flex;
 align-items: flex-start;
 justify-content: center;
-margin-top: 10px;
+
+border-radius: 20px;
 
  
 }
@@ -339,29 +341,44 @@ margin-top: 10px;
 
 
   background-color:white;
+  
  
 
 }
 
 
 .en-parrot {
-  display: none; /* Hide the element by default */
+  display: none; 
 
   position: absolute;
   margin-top: 100px;
   margin-left: 80px;
+  
+  
+  
 }
+
 
 .en-box:hover .en-parrot {
   display: block; 
+ 
+  
 }
-
-
-
 
 
 .en-box p.hovered {
 
   background-color: rgb(249, 141, 8); 
+  margin-top: 1px;
   width: 130px;
+  transform: translateY(30%);
+  transition: transform 0.5s ease;
+}
+
+
+.en-box .en-parrot.hovered {
+  transform: translateX(-30%);
+  transition: transform 0.5s ease;
+
+
 }
