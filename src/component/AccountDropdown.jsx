@@ -32,7 +32,7 @@ const AccountDropdown = () => {
             <p>Bagrati</p>
           </span>
           <span className="arrow-white">
-            <i class="fa-solid fa-angle-down"></i>
+          <i class="fa-solid fa-chevron-down"></i>
           </span>
         </div>
       </div>

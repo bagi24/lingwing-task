@@ -50,7 +50,7 @@ const LanguageDropdown = ({ languages }) => {
         <div className="abbreviation" onClick={handleAbbreviationClick}>
           {countryAbbreviation.toUpperCase()}
           <span className="arrow">
-            <i class="fa-solid fa-angle-down"></i>{" "}
+            <i class="fa-solid fa-angle-down"></i>
           </span>
         </div>
       </div>

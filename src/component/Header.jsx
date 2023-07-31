@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import lingwingLogo from "../images/lingwing-logo.svg";
 import GeFlag from "../images/Georgian-lang.png"
 import EnFlag from "../images/English-lang.png"
@@ -9,6 +10,12 @@ import LanguageDropdown from "./LanguageDropdown";
 import AccountDropdown from "./AccountDropdown";
 
 const Header = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen((prevIsModalOpen) => !prevIsModalOpen);
+  };
 
     const languages = [
         { name:  "Georgian", flagUrl: `${GeFlag}` },
@@ -25,9 +32,9 @@ const Header = () => {
     <div className="header-conteiner">
         <div className="header-leftSide">
 
-        <span className="fabars-menu">
+        <span className="fabars-menu" onClick={toggleModal}>
         <i className="fa-sharp fa-solid fa-bars"></i>
-      </span>
+      </span> 
       <span className="lingwingLogo">
         <img className="lingwing-Logo" src={lingwingLogo} alt="lingwing Logo" />
       </span>
@@ -58,7 +65,18 @@ const Header = () => {
 
       </div>
 
-     
+   
+     {isModalOpen && (
+        <div className="modal-container">
+          <div className="modal-content">
+            {/* Add your modal content here */}
+            <h2>Full-Screen Modal</h2>
+            <p>This is the content of the modal.</p>
+            <button onClick={toggleModal}>Close</button>
+          </div>
+        </div>
+      )}
+    
     </div>
   );
 };
