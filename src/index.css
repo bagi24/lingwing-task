@@ -304,10 +304,12 @@ width: 100%;
   background-blend-mode: multiply; 
   background-repeat: no-repeat; 
   background-size: cover; 
-  background-color:#692e96;
+  background-color:#9257c0;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  
   
 
  
@@ -318,4 +320,48 @@ width: 100%;
 }
 .h1-1 {
   color: rgb(250, 3, 250);
+}
+
+.en-box p{
+position: absolute;
+  font-size: 20px;
+margin-bottom: 180px;
+color: white;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+margin-top: 10px;
+
+ 
+}
+
+.en-box:hover   {
+
+
+  background-color:white;
+ 
+
+}
+
+
+.en-parrot {
+  display: none; /* Hide the element by default */
+
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 80px;
+}
+
+.en-box:hover .en-parrot {
+  display: block; 
+}
+
+
+
+
+
+.en-box p.hovered {
+
+  background-color: rgb(249, 141, 8); 
+  width: 130px;
 }
