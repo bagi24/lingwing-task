@@ -291,27 +291,33 @@ font-size: 24px;
 
 .content-languages{
 width: 100%;
-  border: 2px solid red;
+  
 }
 
 .en-box{
 
-  border: 2px solid goldenrod;
+  
   width: 130px;
   height: 200px;
   border-radius: 20px;
-  background-image: url('./images/eng_o.jpg');
+  background-image: url('./images/eng_o.jpg') ;
   background-blend-mode: multiply; 
   background-repeat: no-repeat; 
   background-size: cover; 
-  background-color:#9257c0;
+  background-color:#692e96;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   position: relative;
- 
-
+  z-index: 5;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transition-property: all;
+  border-radius: 13px;
+  box-shadow: 0 2px 2px 1px rgba(0,0,0,.3);
+  background-position: center;
 
  
 }
@@ -341,6 +347,8 @@ border-radius: 20px;
 
 
   background-color:white;
+  transform: scale(1.05) ;
+  transition: transform 0.3s ease;
   
  
 
@@ -351,9 +359,9 @@ border-radius: 20px;
   display: none; 
 
   position: absolute;
-  margin-top: 100px;
+  margin-top: 110px;
   margin-left: 80px;
-  
+  width: 60px;
   
   
 }
@@ -368,17 +376,31 @@ border-radius: 20px;
 
 .en-box p.hovered {
 
-  background-color: rgb(249, 141, 8); 
-  margin-top: 1px;
+  background-color: rgb(234, 178, 95); 
+  border-radius: 10px;
+margin-top: 0px;
   width: 130px;
-  transform: translateY(30%);
-  transition: transform 0.5s ease;
+  height: 40px;
+  transform: translateY(25%);
+  transition: transform 0.3s ease;
 }
 
 
 .en-box .en-parrot.hovered {
-  transform: translateX(-30%);
-  transition: transform 0.5s ease;
+  transform: translateX(-20%);
+  transition: transform 0.3s ease;
 
 
+}
+
+.en-box .en-Flag.hovered {
+  transform: translateY(-15%);
+  transition: transform 0.3s ease;
+
+
+}
+
+.en-Flag {
+
+  width: 80px;
 }

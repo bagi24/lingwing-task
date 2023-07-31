@@ -28,7 +28,7 @@ const Content = () => {
           onMouseLeave={handleLeave}
         >
           <p className={isHovered ? 'hovered' : ''}>{isHovered ? 'დაწყება' : 'ინგლისური'}</p>
-          <img className='en-Flag' src={EnFlag} alt="" />
+          <img className={`en-Flag ${isHovered ? 'hovered' : ''}`} src={EnFlag} alt="" />
           <img className={`en-parrot ${isHovered ? 'hovered' : ''}`} src={EnParrot} alt="" />
         </div>
       </div>
